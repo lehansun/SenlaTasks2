@@ -42,7 +42,7 @@ public class WordsSorter {
     }
 
     public void printWords() {
-        if (!(words==null)) {
+        if ((words!=null)) {
             System.out.println("Printing sorted words: ");
             words.forEach(System.out::println);
         }
