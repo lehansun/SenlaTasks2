@@ -3,8 +3,10 @@ package com.senla.courses.brest.task6.service;
 import java.util.ArrayList;
 
 /**
- * The class creates a matrix of sets of things,
- * in accordance with the number of things
+ * The class creates a matrix of possible sets of things,
+ * in accordance with the number of things.
+ *
+ * Passing through the matrix allows to find the set of things with the highest cost
  */
 public class Matrix {
     private ArrayList<String> matrix = new ArrayList<>();
