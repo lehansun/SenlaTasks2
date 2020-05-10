@@ -17,13 +17,13 @@ public class WordsCounter {
     }
 
     public void setWords(String line) {
+        line = line.toLowerCase().replaceAll("[^а-яА-Яa-zA-Z]", " ").trim();
         String[] lines = line.split(" ");
         for (String word : lines) {
-            String line2 = word.replaceAll("\\W[^а-яА-Я]]", "").toLowerCase();
-            if (words.containsKey(line2)) {
-                words.put(line2, words.get(line2)+1);
+            if (words.containsKey(word)) {
+                words.put(word, words.get(word)+1);
             } else {
-                words.put(line2, 1);
+                words.put(word, 1);
             }
         }
     }
