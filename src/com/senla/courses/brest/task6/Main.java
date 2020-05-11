@@ -4,6 +4,7 @@ import com.senla.courses.brest.task6.exceptions.CapacityException;
 import com.senla.courses.brest.task6.model.Backpack;
 import com.senla.courses.brest.task6.model.Thing;
 import com.senla.courses.brest.task6.service.BackpackService;
+import com.senla.courses.brest.task6.service.BackpackServiceImpl;
 
 import java.util.ArrayList;
 
@@ -19,7 +20,7 @@ public class Main {
         things.add(new Thing(185, 1200));
         things.add(new Thing(50, 10));
 
-        BackpackService service = new BackpackService();
+        BackpackService service = new BackpackServiceImpl();
         things =  service.getListOfThingsWithHighestCost(things, bag);
 
 //      Print result
